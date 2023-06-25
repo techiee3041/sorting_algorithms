@@ -5,10 +5,6 @@ CAlgorithmData structure
 
 *    By: Alexandre Gautier
 *    Weight: 2
-*    Project to be done in teams of 2 people (your team: Doreen Momanyi, Dancan agweli tumbo tumbo)
-*    Project will start Jun 21, 2023 6:00 AM, must end by Jun 28, 2023 6:00 AM
-*    Checker was released at Jun 23, 2023 12:00 AM
-*    An auto review will be launched at the deadline
 
 ![](https://s3.amazonaws.com/intranet-projects-files/holbertonschool-low_level_programming/248/willy-wonka.png)  
   
