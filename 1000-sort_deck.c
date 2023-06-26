@@ -26,7 +26,7 @@ void sort_deck(deck_node_t **deck)
 			fo = curr->next;
 
 			t->next = fo;
-			if (four)
+			if (fo)
 				fo->prev = t;
 			th->next = t;
 			th->prev = o;
