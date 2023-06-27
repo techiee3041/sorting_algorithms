@@ -15,7 +15,6 @@ void shell_sort(int *array, size_t size)
 		return;
 
 	while ((count = count * 3 + 1) < size)
-		x;
 
 	count = (count - 1) / 3;
 
