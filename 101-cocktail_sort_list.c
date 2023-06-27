@@ -40,11 +40,11 @@ void switch_nodes(listint_t **list, listint_t **p)
 	else
 		*list = w;
 	y->prev = w;
-	*p = w ;
+	*p = w;
 }
 
 /**
- * cocktail_sort_list - sorts a doubly linked list 
+ * cocktail_sort_list - sorts a doubly linked list
  * @list: pointer to list
  */
 void cocktail_sort_list(listint_t **list)
