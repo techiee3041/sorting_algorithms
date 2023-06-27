@@ -1,4 +1,5 @@
 #include "sort.h"
+#include <stdbool.h>
 
 /**
   * insertion_sort_list - Sorts an doubly linked list
@@ -8,7 +9,7 @@
   */
 void insertion_sort_list(listint_t **list)
 {
-	bool fg = false;
+	bool flag = false;
 	listint_t *t = NULL, *x = NULL;
 
 	if (!list || !(*list) || !(*list)->next)
@@ -36,16 +37,16 @@ void insertion_sort_list(listint_t **list)
 
 			if (t->prev && t->prev->n > t->n)
 			{
-				if (!fg)
+				if (!flag)
 					x = t->next;
-				fg = true;
+				flag = true;
 				t = t->prev;
 				continue;
 			}
 		}
-		if (!fg)
+		if (!flag)
 			t = t->next;
 		else
-			t = x, fg = false;
+			t = x, flag = false;
 	}
 }
