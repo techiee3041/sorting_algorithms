@@ -1,32 +1,41 @@
 #include "sort.h"
 
 /**
-* shell_sort - shell sorting
-* @array: array of integers
-* @size: an array
-* Return: nothing
+ * shell_sort - sort array
+ * @array: array to sort
+ * @size: size of the array
+ * Return: nothing
 */
+
 void shell_sort(int *array, size_t size)
 {
-	size_t count = 0, y, x;
-	int buff;
+    int x = 0, y = 0, s = 1, a = 0;
 
-	if (size < 2)
-		return;
+    if (!array || size < 2)
+        return;
 
-	while ((count = count * 3 + 1) < size)
+    while (s < (int)size / 3)
+        s = s * 3 + 1;
 
-	count = (count - 1) / 3;
+    while (s > 0)
+    {
+        y = s;
+        while (y < (int)size)
+        {
+            a = array[y];
+            x = y;
 
-	for (; count > 0; count = (count - 1) / 3)
-	{
-		for (x = count; x < size; x++)
-		{
-			buff = array[x];
-			for (y = x; y >= count && buff <= array[y - count]; y -= count)
-				array[y] = array[y - count];
-			array[y] = buff;
-		}
-		print_array(array, size);
-	}
+            while (x > s - 1 && array[x - s] >= a)
+            {
+                array[x] = array[x - s];
+                x = x - s;
+            }
+
+            array[x] = a;
+            y++;
+        }
+        print_array(array, size);
+        s = (s - 1) / 3;
+    }
 }
+
